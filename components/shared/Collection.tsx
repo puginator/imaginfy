@@ -45,7 +45,7 @@ export const Collection = ({
 
     router.push(newUrl, {scroll: false});
   };
-
+  console.log(images)
   return (
     <>
       <div className="collection-heading">
@@ -56,7 +56,7 @@ export const Collection = ({
       {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
-            <Card image={image} key={image.author._id} />
+            <Card image={image} key={image._id} />
           ))}
         </ul>
       ) : (
